@@ -53,7 +53,7 @@ def settings_test(text):
 
 #Ask the settings of the game
 print("Give a range:")
-SETTINGS = ["Lowest possible number:", "Highest possible number:", "Number of trys:"]
+SETTINGS = ["Lowest possible number:", "Highest possible number:", "Number of tries:"]
 SAVE_SETTINGS = []
 for i in SETTINGS:
     SAVE_SETTINGS.append(settings_test(i))

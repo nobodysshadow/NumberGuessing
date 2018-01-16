@@ -1,14 +1,16 @@
+#Imports and #Import doctype
+"""
+Import randomize library int
+"""
+from random import randint
+
 #guess_number.py Application
 """
-The first small and simple project to have an app that selects a random number between 1 and 99. 
-The player has a maximum of five guesses to find the selected number. 
+The first small and simple project to have an app that selects a random number between 1 and 99.
+The player has a maximum of five guesses to find the selected number.
 By each Guess you will get a feedback if the selected number is bigger or smaller than your guess.
 Hope you find it interessting.
 """
-
-#Imports and #Import doctype
-""" Import randomize library int """
-from random import randint
 
 #Testing it is the right value
 def get_number(comment):
@@ -17,9 +19,8 @@ def get_number(comment):
     comment: give the text to ask for the number.
     """
     while True:
-        print(comment)
         try:
-            number = int(input())
+            number = int(input(comment))
         except Exception:
             print("This was no number!")
         finally:
@@ -34,7 +35,7 @@ def get_settings():
     returns the lowest possible, the highest possible number and the number of tries
     """
     print("Please provide the range first.")
-    settings = ["Lowest possible number:", "Highest possible number:", "Number of tries:"]
+    settings = ["Lowest possible number: ", "Highest possible number: ", "Number of tries: "]
     save_settings = []
     for i in settings:
         # print(i)
@@ -62,7 +63,7 @@ def check_number(number, randomint):
     """
     #Check the number
     if number == randomint:
-        print("You have guessed the correct answer")
+        print("You have guessed the correct answer!")
         success = 1
     elif number > randomint:
         print("It's not the correct number. You guessed to big.")
@@ -89,9 +90,8 @@ while SAVE_SETTINGS[2] > COUNT:
         TEXT2 = str((SAVE_SETTINGS[2] - COUNT)) + " remaining guesses"
         print(TEXT1 + TEXT2)
         print(" ")
-    
+
 #Ending
 if COUNT > SAVE_SETTINGS[2]:
     print("Good luck next time.")
-print("Press any key to close the programm")
-input()
+input("Press ENTER to close the programm!")
