@@ -25,7 +25,9 @@ int main()
 	cout << "Welcome to Numberguessing" << endl;
 	//Get the game settings from the Player
 	settings();
-	
+	srand (time(NULL));
+	rand_number = rand() % 99 + 1;
+	cout << "Random number = " << rand_number;
 	cin >> Break;
 	return 0;
 }
