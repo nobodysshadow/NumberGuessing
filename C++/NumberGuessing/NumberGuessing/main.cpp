@@ -29,8 +29,9 @@ int main()
 	cout << "Welcome to Numberguessing" << endl;
 	//Get the game settings from the Player
 	settings();
-	srand (time_t(NULL));
+	srand (time(NULL));
 	rand_number = rand() % high + low;
+	cout << rand_number << endl;
 	game();
 	getline(cin, Break);
 	return 0;
@@ -48,24 +49,21 @@ void settings() {
 }
 //The game
 void game() {
-	for (int count = 0; count <= tries; count++) {
-		cout << "Hallo" << endl;
+	for (int count = 0; count < tries; count++) {
 		//Ask for an input
 		cout << "Guess a number: ";
 		cin >> number;
 		//Check is it the righ number
-		if (number = rand_number) {
+		if (number == rand_number) {
 			found = true;
 			win = true;
 			cout << "You have won!" << endl;
 		}
-		//Have you enough tries left
-		if (tries = 0) {
-			found = true;
-			cout << "You have no tries left." << endl;
+		//Have you won?
+		getline(cin, Break);
+		if (found) {
+			count = tries;
 		}
-		//Remove a try
-		tries = tries - 1;
 	}
 	return;
 }
