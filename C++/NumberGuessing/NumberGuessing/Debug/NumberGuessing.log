@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\wasse\documents\github\numberguessing\c++\numberguessing\numberguessing\main.cpp(32): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  NumberGuessing.vcxproj -> D:\wasse\Documents\GitHub\NumberGuessing\C++\NumberGuessing\Debug\NumberGuessing.exe
+  NumberGuessing.vcxproj -> D:\wasse\Documents\GitHub\NumberGuessing\C++\NumberGuessing\Debug\NumberGuessing.pdb (Full PDB)
